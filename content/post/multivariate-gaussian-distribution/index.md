@@ -49,7 +49,9 @@ projects: []
 
 Multivariate gaussian model
 
-$$f_\boldsymbol{x}(x_1, x_2,..., x_n) = \frac{1}{\sqrt{(2 \pi)^k} det(\boldsymbol{\Sigma})} \mathrm{exp}(-\frac{1}{2}(\boldsymbol{x}-\boldsymbol{\mu})^\mathrm{T}\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu}))$$
+$$f_\boldsymbol{x}(x_1, x_2,..., x_n) \propto \mathrm{exp}(-\frac{1}{2}(\boldsymbol{x}-\boldsymbol{\mu})^\mathrm{T}\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu})),$$
+
+and the normalization factor is given by $$\frac{1}{\sqrt{(2 \pi)^k} det(\boldsymbol{\Sigma})}.$$
 
 
 ```python
@@ -60,12 +62,20 @@ $$f_\boldsymbol{x}(x_1, x_2,..., x_n) = \frac{1}{\sqrt{(2 \pi)^k} det(\boldsymbo
 import numpy as np
 import matplotlib.pyplot as plt
 
-x = np.linspace(-1000,1000,300)
+x = np.linspace(-4,4,200)
 x1, x2 = np.meshgrid(x, x)
-covariance_matrix = np.identity(2)
-mu = np.array([-400,300])
-density_matrix=np.einsum('i...,ii,i...', np.array([x1-mu[0],x2-mu[1]]), covariance_matrix, np.array([x1-mu[0],x2-mu[1]]))
-plt.contourf(x1, x2, density_matrix)
+covar = np.array([[[1,0], [0, 1]],[[0.2,0], [0, 1]],[[0.2,-0.4], [-0.4, 1]],[[0.2,.4], [.4, 1]]])
+mu_vec = np.array([1,1])
+print(str(mu_vec.tostring))
+shifted_mu_vec = np.array([x1-mu_vec[0],x2-mu_vec[1]])
+for i in range(4):
+    tensor_contraction=np.einsum('i...,ij,j...', shifted_mu_vec, np.linalg.inv(covar[i]), shifted_mu_vec)
+    density_matrix = np.exp(-0.5*tensor_contraction)
+    plt.subplot(2,2, i+1)
+    plt.contourf(x1, x2, density_matrix, cmap = 'jet')   
+    plt.title('covariance_matrix=%s' % covar[i].tolist())
 plt.show()
 
+
 ```
+![](mvn.png)
