@@ -66,7 +66,6 @@ x = np.linspace(-4,4,200)
 x1, x2 = np.meshgrid(x, x)
 covar = np.array([[[1,0], [0, 1]],[[0.2,0], [0, 1]],[[0.2,-0.4], [-0.4, 1]],[[0.2,.4], [.4, 1]]])
 mu_vec = np.array([1,1])
-print(str(mu_vec.tostring))
 shifted_mu_vec = np.array([x1-mu_vec[0],x2-mu_vec[1]])
 for i in range(4):
     tensor_contraction=np.einsum('i...,ij,j...', shifted_mu_vec, np.linalg.inv(covar[i]), shifted_mu_vec)
