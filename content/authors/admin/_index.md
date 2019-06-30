@@ -15,7 +15,7 @@ role: Postdoctoral Researcher
 # Organizations/Affiliations
 organizations:
 - name: Stockholm University
-  url: "https://www.su.se/english/profiles/yyu-1.195448"
+  url: "https://www.su.se/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include nuclear magnetic resonance.
