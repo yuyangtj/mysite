@@ -48,6 +48,7 @@ projects: []
 ---
 
 Multivariate gaussian model
+Multivariate gaussian model
 
 $$f_\boldsymbol{x}(x_1, x_2,..., x_n) = \frac{1}{\sqrt{(2 \pi)^k} det(\boldsymbol{\Sigma})} \mathrm{exp}(-\frac{1}{2}(\boldsymbol{x}-\boldsymbol{\mu})^\mathrm{T}\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu}))$$
 
