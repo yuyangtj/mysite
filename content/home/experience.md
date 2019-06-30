@@ -25,11 +25,6 @@ date_format = "Jan 2006"
   date_start = "2019-01-01"
   date_end = ""
   description = """
-  Responsibilities include:
-  
-  * Analysing
-  * Modelling
-  * Deploying
   """
 
 [[experience]]
@@ -39,7 +34,7 @@ date_format = "Jan 2006"
   location = "Stockholm,Sweden"
   date_start = "2014-04-15"
   date_end = "2018-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
+  description = """lead the experiment and calculation section of a solid-state NMR course"""
 
 [[experience]]
   title = "Research Trainee"
@@ -48,6 +43,7 @@ date_format = "Jan 2006"
   location = "Aarhus, Denmark"
   date_start = "2013-08-01"
   date_end = "2013-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
+  description = """
+  """
 
 +++
