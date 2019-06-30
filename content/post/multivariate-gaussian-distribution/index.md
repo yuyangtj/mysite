@@ -10,7 +10,7 @@ categories: []
 date: 2019-06-29T08:30:11+02:00
 lastmod: 2019-06-29T08:30:11+02:00
 featured: false
-draft: fasle
+draft: true
 
 # ```python
 # #plot Multivariate gaussian 
