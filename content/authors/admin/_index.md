@@ -23,7 +23,7 @@ bio: My research interests include nuclear magnetic resonance.
 interests:
 - Data Science
 - Machine Learning
-- Nuclear Magnetic Chemistry
+- Nuclear Magnetic Resonance
 - Biomaterials
 - Glasses
 
