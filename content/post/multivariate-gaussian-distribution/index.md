@@ -56,8 +56,9 @@ and the normalization factor is given by $$\frac{1}{\sqrt{(2 \pi)^k} det(\boldsy
 
 ```python
 #plot Multivariate gaussian 
-#using tensor contraction (imn)(ij)(jmn)->jmn, which gives 'i...,ij,j...'
-#n is the # of variates, and m is the # of observations
+#using tensor contraction (imn)(ij)(jmn)->mn, which gives 'i...,ij,j...'
+#i (= j) is the # of variates, (m,n) is the # of grid points, 
+#where the probability density function is calculated
 
 import numpy as np
 import matplotlib.pyplot as plt
