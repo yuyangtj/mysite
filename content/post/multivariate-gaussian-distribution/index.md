@@ -51,7 +51,7 @@ Multivariate gaussian model
 
 $$f_\boldsymbol{x}(x_1, x_2,..., x_n) \propto \mathrm{exp}(-\frac{1}{2}(\boldsymbol{x}-\boldsymbol{\mu})^\mathrm{T}\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu})),$$
 
-and the normalization factor is given by $$\frac{1}{\sqrt{(2 \pi)^k} det(\boldsymbol{\Sigma})}.$$
+and the normalization factor is given by $$\frac{1}{\sqrt{(2 \pi)^k} \mathrm{det}(\boldsymbol{\Sigma})}.$$
 
 
 ```python
