@@ -27,5 +27,11 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
-Visualization of EM (Expectation-Minimization) algorithm
+Visualization of EM (Expectation-Minimization) algorithm.
+
 ![](giphy.gif)
+
+Each symbol represents the conditional probabilities $$p(y=k|x; \theta)$$
+and $$\sum_{k\in(R, B, G)}{p(y=k|x; \theta)}=1$$
+
+Ellipses represent the 2D Gaussian contour, which captures >99.7% probabilities of the associated Gaussian distribution.
