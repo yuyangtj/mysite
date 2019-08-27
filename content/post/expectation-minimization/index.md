@@ -33,7 +33,7 @@ Visualization of EM (Expectation-Minimization) algorithm.
 
 ![](giphy.gif)
 
-naive version
+<!--naive version
 E-step:
 
 get the conditional probability 
@@ -52,6 +52,7 @@ $$\hat{n}_j = \sum_i\delta(j{\mid}i)$$
 $$\hat{p}_j = \frac{\hat{n}_j}{n}$$ 
 $$\hat{\mu}_j = \frac{1}{\hat{n}_j}\sum_i\delta(j{\mid}i)x^{(i)}$$ 
 $$\hat{\sigma}^2_j = \frac{1}{\hat{n}_jd}\sum_i\delta(j{\mid}i){\Vert}x^{(i)}-\mu_j{\Vert}^2$$
+-->
 
 Each symbol represents the conditional probabilities $$p(y=k{\mid}x; \theta)$$
 and $$\sum_{k\in(R, B, G)}{p(y=k{\mid}x; \theta)}=1$$
